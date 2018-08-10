@@ -44,7 +44,7 @@ const logoStyles = css`
 const titleStyles = css`
   letter-spacing: 1.5px;
   font-size: 34px;
-  color: rgba(255, 255, 255, 0.87);
+  color: ${colors.white};
   font-weight: 300;
   vertical-align: middle;
   display: inline-block;
