@@ -12,6 +12,7 @@
     "gatsby-image": "^1.0.13",
     "gatsby-link": "^1.6.21",
     "gatsby-plugin-emotion": "^1.1.8",
+    "gatsby-plugin-google-analytics": "^1.0.31",
     "gatsby-plugin-offline": "^1.0.10",
     "gatsby-plugin-react-helmet": "^2.0.6",
     "gatsby-plugin-react-next": "^1.0.4",
