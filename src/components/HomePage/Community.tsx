@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { css } from 'emotion';
-import { Flex, Box } from 'grid-styled';
+import { Flex, Box } from '@rebass/grid/emotion';
 import styled from 'react-emotion';
 import Img from 'gatsby-image';
 
@@ -28,7 +28,7 @@ function Item({ title, description, link, image }) {
   `;
 
   return (
-    <Box className={boxStyles} w={[1, 5 / 20]}>
+    <Box className={boxStyles} width={[1, 5 / 20]}>
       <div
         className={css`
           margin-bottom: 20px;

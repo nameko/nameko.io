@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { css } from 'emotion';
-import { Flex, Box } from 'grid-styled';
+import { Flex, Box } from '@rebass/grid/emotion';
 import styled from 'react-emotion';
 import Img from 'gatsby-image';
 
@@ -33,7 +33,7 @@ function ValueProp({ data, images }) {
 
   return (
     <ValuePropFlex flexWrap="wrap" justifyContent="center">
-      <Box w={[1, 4 / 12]}>
+      <Box width={[1, 4 / 12]}>
         <Flex justifyContent="center">
           <Img
             className={imageStyles}
@@ -42,7 +42,7 @@ function ValueProp({ data, images }) {
           />
         </Flex>
       </Box>
-      <Box w={[1, 7 / 12]}>
+      <Box width={[1, 7 / 12]}>
         <h3 className={titleStyles}>{data.title}</h3>
         <p>{data.description}</p>
       </Box>

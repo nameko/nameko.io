@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { css } from 'emotion';
-import { Flex, Box } from 'grid-styled';
+import { Flex, Box } from '@rebass/grid/emotion';
 import Img from 'gatsby-image';
 
 import { Container } from '../Layout';
@@ -62,7 +62,7 @@ function Author(props) {
 
   return (
     <>
-      <Box w={[1, 6 / 12]}>
+      <Box width={[1, 6 / 12]}>
         <Img
           className={imageStyles}
           outerWrapperClassName={imageWrapperStyles}

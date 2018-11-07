@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { css } from 'emotion';
-import { Flex, Box } from 'grid-styled';
+import { Flex, Box } from '@rebass/grid/emotion';
 import styled from 'react-emotion';
 
 import { Container } from '../Layout';
@@ -46,7 +46,7 @@ function Extension({ title, description, link }) {
   `;
 
   return (
-    <Box className={boxStyles} w={[1, 4 / 12]}>
+    <Box className={boxStyles} width={[1, 4 / 12]}>
       <div
         className={css`
           margin-bottom: 20px;

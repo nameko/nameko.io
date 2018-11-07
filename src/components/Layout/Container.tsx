@@ -1,5 +1,5 @@
 import styled from 'react-emotion';
-import { Box } from 'grid-styled';
+import { Box } from '@rebass/grid/emotion';
 
 import { media } from '../../utils/css';
 

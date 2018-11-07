@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { css } from 'emotion';
-import { Flex } from 'grid-styled';
+import { Flex } from '@rebass/grid/emotion';
 
 import { colors, media } from '../../utils/css';
 
@@ -168,7 +168,7 @@ class GithubBadge extends React.Component<any, GithubBadgeState> {
   constructor(props) {
     super(props);
     this.state = {
-      numStars: 0,
+      numStars: 2322, // start with a number close to the current star rating
     };
   }
 
@@ -199,15 +199,13 @@ class GithubBadge extends React.Component<any, GithubBadgeState> {
               <span className="gh-ico" />
               <span className="gh-text">Star</span>
             </a>
-            {numStars && <span className="gh-triangle" />}
-            {numStars && (
-              <a
-                className="gh-count"
-                href="https://github.com/nameko/nameko/stargazers"
-              >
-                {numStars}
-              </a>
-            )}
+            <span className="gh-triangle" />
+            <a
+              className="gh-count"
+              href="https://github.com/nameko/nameko/stargazers"
+            >
+              {numStars}
+            </a>
           </span>
         </div>
       </Flex>
