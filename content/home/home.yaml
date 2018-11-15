@@ -28,10 +28,10 @@ extensions:
     description: Send and receive messages from Slack
     link: https://github.com/iky/nameko-slack
   - title: Sqlalchemy
-    description: Sqlalchemy dependancy
+    description: Sqlalchemy dependency
     link: https://github.com/onefinestay/nameko-sqlalchemy
   - title: Redis
-    description: Redis dependancy
+    description: Redis dependency
     link: https://github.com/etataurov/nameko-redis
   - title: Django
     description: Django wrapper for Nameko
