@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { HeroBanner } from '../components/HomePage/HeroBanner';
 import { Badges } from '../components/HomePage/Badges';
 import { ValueProps } from '../components/HomePage/ValueProps';
+import { Support } from '../components/HomePage/Support';
 import { Installation } from '../components/HomePage/Installation';
 import { Community } from '../components/HomePage/Community';
 import { Companies } from '../components/HomePage/Companies';
@@ -52,6 +53,9 @@ export default function HomePage({ data }) {
         <GroupedSection>
           <Community data={data.homeYaml.community} images={data.communityImages} />
         </GroupedSection>
+        <GroupedSection>
+          <Support data={data.support} />
+        </GroupedSection>
       </div>
       <Extensions data={data.homeYaml.extensions} />
       <div>
@@ -85,6 +89,7 @@ export const query = graphql`
     ...CompaniesImages
     ...CodeExamples
     ...CodeInstallation
+    ...Support
     ...AuthorsImages
     ...CommunityImages
     homeYaml(id: { regex: "/home/home.yaml/" }) {
@@ -116,10 +121,13 @@ query HomePage {
   ...CodeExamples
   ...CodeInstallation
   ...AuthorsImages
+  ...CommunityImages
   homeYaml(id: {regex: "/home/home.yaml/"}) {
     ...HomePageHeroBanner
     ...HomePageValueProps
     ...HomePageCompanies
+    ...HomePageSupport
+    ...HomePageCommunity
     ...HomePageExtensions
     ...HomePageTestimonials
     ...HomePageAuthors
@@ -204,6 +212,20 @@ fragment AuthorsImages on RootQueryType {
   }
 }
 
+fragment CommunityImages on RootQueryType {
+  communityImages: allImageSharp(
+    filter: { id: { regex: "/images/community/" } }
+  ) {
+    edges {
+      node {
+        resolutions(width: 120) {
+          originalName
+        }
+      }
+    }
+  }
+}
+
 fragment HomePageHeroBanner on HomeYaml {
   heroBanner {
     title
@@ -234,4 +256,24 @@ fragment HomePageTestimonials on HomeYaml {
     }
   }
 }
+
+fragment HomePageCommunity on HomeYaml {
+  community {
+    title
+    items {
+      title
+      description
+      link
+      image
+    }
+  }
+}
+
+fragment Support on RootQueryType {
+  support: markdownRemark(id: {regex: "/home/support/"}) {
+    html
+  }
+}
+
+
 */

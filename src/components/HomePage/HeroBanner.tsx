@@ -109,6 +109,28 @@ const navStyles = css`
   }
 `;
 
+const tideliftStyles = css`
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: #f6914d;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    padding: 10px;
+    line-height: 1;
+    box-shadow: 3px 3px 10px #333;
+  } span {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #2F3342;
+    font-size: 0.8em;
+  } img {
+    margin: 0px 10px 0px 0px;
+  }
+`;
+
 const docsLinkStyles = css`
   left: 0;
 `;
@@ -133,10 +155,25 @@ function Navigation() {
   );
 }
 
+function Tidelift({ data } ) {
+  return (
+    <div className={tideliftStyles}>
+        <a href={data.link} rel="noopener" target="_blank">
+          <span>
+            <img alt={data.altText} src={data.image.childImageSharp.resolutions.src} width="24px"/>
+           </span>
+          <span className={mobileOnly}>{data.messages.mobile}</span>
+          <span className={desktopOnly}>{data.messages.desktop}</span>
+        </a>
+    </div>
+  );
+}
+
 export function HeroBanner({ data }) {
   return (
     <section className={heroStyles}>
       <Navigation />
+      <Tidelift data={data.tidelift} />
       <div className={leadStyles}>
         <div>
           <LogoSvg className={logoStyles} />
@@ -159,6 +196,21 @@ export const query = graphql`
       howToSay
       tagLine
       cta
+      tidelift {
+        link
+        image {
+          childImageSharp {
+            resolutions(width:24) {
+              src
+            }
+          }
+        }
+        altText
+        messages {
+          mobile
+          desktop
+        }
+      }
     }
   }
 `;
