@@ -3,6 +3,13 @@ heroBanner:
   howToSay: "[ nah - meh - koh ]"
   tagLine: A microservice framework for Python.
   cta: Get Started
+  tidelift:
+    link: https://tidelift.com/subscription/pkg/pypi-nameko?utm_source=pypi-nameko&utm_medium=referral&utm_campaign=website
+    image: tidelift-mark-bright.png
+    altText: Tidelift
+    messages:
+      mobile: Get Professional Support
+      desktop: Get Professionally-Supported Nameko
 
 valueProps:
 - title: Focus on business logic

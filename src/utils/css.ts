@@ -25,12 +25,12 @@ export const media = {
 
 export const desktopOnly = css`
   ${media.mobile`
-    display: none;
+    display: none !important;
   `};
 `;
 
 export const mobileOnly = css`
   ${media.desktop`
-    display: none;
+    display: none !important;
   `};
 `;
