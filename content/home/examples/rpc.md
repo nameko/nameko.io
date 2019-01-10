@@ -7,7 +7,7 @@ order: 1
 Nameko includes an implementation of RPC over AMQP. It comprises the @rpc entrypoint, a proxy for services to talk to other services, and a standalone proxy that non-Nameko clients can use to make RPC calls to a cluster
 
 ```python{7,17}
-# rpc.py
+# rpc_services.py
 from nameko.rpc import rpc, RpcProxy
 
 class ServiceY:
