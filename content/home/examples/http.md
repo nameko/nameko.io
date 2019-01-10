@@ -8,7 +8,7 @@ The HTTP entrypoint is built on top of [werkzeug](http://werkzeug.pocoo.org/), a
 
 ```python{8,12}
 
-# http.py
+# http_service.py
 import json
 from nameko.web.handlers import http
 
