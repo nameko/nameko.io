@@ -8,8 +8,8 @@ heroBanner:
     image: tidelift-mark-bright.png
     altText: Tidelift
     messages:
-      mobile: Get Professional Support
-      desktop: Get Professionally-Supported Nameko
+      mobile: Nameko for enterprise
+      desktop: Nameko for enterprise
 
 valueProps:
 - title: Focus on business logic
